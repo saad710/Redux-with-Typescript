@@ -1,3 +1,4 @@
+import { TestData } from '../../dummydata/TestData';
 type Test = {
 name : string,
 id: number
@@ -13,19 +14,8 @@ type TestDataAction = {
 }
 
 
-
 const initialState = {
-    test:[
-             {
-                 "name" : "saad",
-                 "id" : 5
-             },
-             {
-                 "name" : "ifrat",
-                 "id" : 6
-             },
-    ]
-   
+    test:TestData
 }
 
  
