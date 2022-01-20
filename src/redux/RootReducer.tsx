@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import TestReducer from './mainCon/TestReducer';
+import ItemReducer from './newItem/ItemReducer'
 
 const reducers = combineReducers({
-  test: TestReducer
+  test: TestReducer,
+  item : ItemReducer,
 });
 
 export default reducers;
