@@ -6,13 +6,22 @@ import { useTypedSelector } from './redux/hooks';
 
 function App() {
   const dispatch = useDispatch();
-  const active  = useTypedSelector((state) => state.test);
+  const active: any  = useTypedSelector((state) => state.test);
   console.log(active)
 
-
+  const handleClick = () => {
+    dispatch({ type: 'test-data', result: active.test.map((a:any) => {
+      return {...a , active:'yes'}
+    }) })
+  }
   return (
     <div className="App">
-        <h1></h1>
+      {
+        active.test.map((a:any)=> (
+          <h1 key={a.id}>{a?.name}</h1>
+        ))
+      }
+      <button onClick={handleClick}>click me</button>
     </div>
   );
 }

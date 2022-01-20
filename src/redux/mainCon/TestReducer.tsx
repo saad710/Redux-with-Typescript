@@ -1,16 +1,16 @@
 import { TestData } from '../../dummydata/TestData';
-type Test = {
+export type Test = {
 name : string,
 id: number
-}
+}[]
 
-type StateProps = {
-    test : Test[]
+export type StateProps = {
+    test : Test
 }
 
 type TestDataAction = {
     type : 'test-data',
-    result : Comment[]
+    result : Test
 }
 
 
